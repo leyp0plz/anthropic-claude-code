@@ -109,8 +109,12 @@ img { display: block; max-width: 100%; }
 
 .logo {
   display: flex;
-  flex-direction: column;
-  line-height: 1.2;
+  align-items: center;
+}
+.logo__img {
+  height: 44px;
+  width: auto;
+  filter: brightness(0) invert(1);
 }
 .logo__main {
   font-size: 1.15rem;
@@ -170,7 +174,8 @@ img { display: block; max-width: 100%; }
   padding: 6px;
   z-index: 200;
 }
-.nav__item--dropdown:hover .dropdown { display: block; }
+.nav__item--dropdown:hover .dropdown,
+.nav__item--dropdown.is-open .dropdown { display: block; }
 .dropdown a {
   display: block;
   padding: 9px 14px;
@@ -218,7 +223,7 @@ img { display: block; max-width: 100%; }
   inset: 0;
   background:
     linear-gradient(135deg, rgba(26,58,92,.88) 0%, rgba(26,58,92,.65) 60%, rgba(26,58,92,.4) 100%),
-    url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80') center/cover no-repeat;
+    url('https://www.jfjost.ch/referenzen/36/bauernhof-0.jpg') center/cover no-repeat;
   z-index: 0;
 }
 
@@ -412,12 +417,12 @@ img { display: block; max-width: 100%; }
 }
 .card:hover .card__img { transform: scale(1.04); }
 
-.card__img--1 { background-color: #c8d8e8; background-image: url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=70'); }
-.card__img--2 { background-color: #e8d8c8; background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=70'); }
-.card__img--3 { background-color: #d0dde8; background-image: url('https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=70'); }
-.card__img--4 { background-color: #d8e8d0; background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=70'); }
-.card__img--5 { background-color: #e8d0d0; background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=70'); }
-.card__img--6 { background-color: #d8d0e8; background-image: url('https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=600&q=70'); }
+.card__img--1 { background-color: #c8d8e8; background-image: url('https://www.jfjost.ch/referenzen/39/living-lilie-1.jpg'); }
+.card__img--2 { background-color: #e8d8c8; background-image: url('https://www.jfjost.ch/referenzen/32/009.jpg'); }
+.card__img--3 { background-color: #d0dde8; background-image: url('https://www.jfjost.ch/referenzen/27/002.jpg'); }
+.card__img--4 { background-color: #d8e8d0; background-image: url('https://www.jfjost.ch/referenzen/39/living-lilie-3.jpg'); }
+.card__img--5 { background-color: #e8d0d0; background-image: url('https://www.jfjost.ch/referenzen/36/bauernhof-1.jpg'); }
+.card__img--6 { background-color: #d8d0e8; background-image: url('https://www.jfjost.ch/referenzen/39/living-lilie-4.jpg'); }
 
 .card__badge {
   position: absolute;

@@ -3,6 +3,25 @@ const toggle = document.getElementById('navToggle');
 const nav = document.getElementById('mainNav');
 toggle?.addEventListener('click', () => nav.classList.toggle('is-open'));
 
+// Touch-friendly dropdowns (click/tap to open on iPad & mobile)
+document.querySelectorAll('.nav__item--dropdown > .nav__link').forEach(link => {
+  link.addEventListener('click', e => {
+    const item = link.parentElement;
+    const isOpen = item.classList.contains('is-open');
+    document.querySelectorAll('.nav__item--dropdown').forEach(i => i.classList.remove('is-open'));
+    if (!isOpen) {
+      e.preventDefault();
+      item.classList.add('is-open');
+    }
+  });
+});
+
+document.addEventListener('click', e => {
+  if (!e.target.closest('.nav__item--dropdown')) {
+    document.querySelectorAll('.nav__item--dropdown').forEach(i => i.classList.remove('is-open'));
+  }
+});
+
 // Sticky header shadow
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
