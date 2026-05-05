@@ -3,7 +3,7 @@ const toggle = document.getElementById('navToggle');
 const nav = document.getElementById('mainNav');
 toggle?.addEventListener('click', () => nav.classList.toggle('is-open'));
 
-// Touch-friendly dropdowns (click/tap to open on iPad & mobile)
+// Touch-friendly dropdowns
 document.querySelectorAll('.nav__item--dropdown > .nav__link').forEach(link => {
   link.addEventListener('click', e => {
     const item = link.parentElement;
@@ -16,6 +16,14 @@ document.querySelectorAll('.nav__item--dropdown > .nav__link').forEach(link => {
   });
 });
 
+// Close dropdown when a dropdown item is clicked
+document.querySelectorAll('.dropdown a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelectorAll('.nav__item--dropdown').forEach(i => i.classList.remove('is-open'));
+  });
+});
+
+// Close dropdown when clicking outside
 document.addEventListener('click', e => {
   if (!e.target.closest('.nav__item--dropdown')) {
     document.querySelectorAll('.nav__item--dropdown').forEach(i => i.classList.remove('is-open'));
