@@ -52,15 +52,12 @@ img { display: block; max-width: 100%; }
 .header__inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
 
 /* LOGO */
-.logo { display: flex; flex-direction: column; gap: 1px; line-height: 1.15; }
-.logo__main {
-  font-size: 1.3rem; font-weight: 800; letter-spacing: -.5px;
-  color: var(--yellow);
+.logo { display: flex; align-items: center; }
+.logo__img {
+  height: 42px; width: auto; display: block;
+  background: var(--white); padding: 5px 10px; border-radius: 6px;
 }
-.logo__sub {
-  font-size: .62rem; font-weight: 500; letter-spacing: 1.2px;
-  text-transform: uppercase; color: rgba(255,255,255,.4);
-}
+.logo__img--footer { height: 36px; margin-bottom: 10px; }
 
 /* NAV */
 .nav__list { display: flex; align-items: center; gap: 2px; list-style: none; }
@@ -229,7 +226,7 @@ img { display: block; max-width: 100%; }
 /* ── FOOTER ── */
 .footer { background: var(--black); color: rgba(255,255,255,.7); border-top: 3px solid var(--yellow); }
 .footer__inner { display: grid; grid-template-columns: 1.5fr 2fr; gap: 60px; padding-top: 56px; padding-bottom: 52px; }
-.footer__brand .logo__main { font-size: 1.4rem; }
+.footer__brand { display: flex; flex-direction: column; }
 .footer__tagline { margin-top: 10px; font-size: .88rem; color: rgba(255,255,255,.35); }
 .footer__links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
 .footer__col h4 { font-size: .75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--yellow); margin-bottom: 16px; }
